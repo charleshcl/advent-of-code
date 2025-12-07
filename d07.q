@@ -4,7 +4,7 @@
 \cd /Users/charleshcl
 \cd github/advent-of-code
 
-diagram:read0 `:./d07ex.txt //data type of string
+diagram:read0 `:./d07.txt //data type of string
 lineCount:count diagram
 lineSize:count diagram[0]
 
@@ -101,15 +101,16 @@ checkSplitters:{[state;splitters]
 initCount:lineSize # 0
 startIdx:diagram[0] ss "S"
 initCount[startIdx]:1
+initCount
 
 state:(`hitCount`rays`countList)!(0;ssr[diagram[0];"S";"|"];initCount);
 
 // state:(`hitCount`rays`countList)!(0;ssr[diagram[0];"S";"|"];(0 0 0 0 0 0 3 5 1 0 0 0 0 0 0));
 // checkSplitters[state] ".......^......." 
 
-part2Res:state checkSplitters/ diagram[til lineSize];
-sum part2Res[`countList]
-
+res:state checkSplitters/ diagram[til lineSize];
+part1Ans:res[`hitCount]
+part2Answer:sum res[`countList]
 
 // 3104: too low
 // working area
