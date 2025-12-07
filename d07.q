@@ -5,8 +5,8 @@
 \cd github/advent-of-code
 
 diagram:read0 `:./d07ex.txt //data type of string
-lineCount:count inFile
-lineSize:count inFile[0]
+lineCount:count diagram
+lineSize:count diagram[0]
 
 "part 1"
 
@@ -46,12 +46,13 @@ checkSplitters:{[state;splitters]
   state
  }
 
-state:(`hitCount`rays)!(0;ssr[diagram[0];"S";"|"]);
-checkSplitters[state] ".......^......."
+// state:(`hitCount`rays)!(0;ssr[diagram[0];"S";"|"]);
+// checkSplitters[state] ".......^......."
 
-state checkSplitters\ diagram[til lineSize];
+state checkSplitters/ diagram[til lineSize];
 
 // working area
+/
 ray: "....|......|..|"
 aft: "....|.....|.||."
 r: "....|......|..|"="|"
@@ -69,3 +70,4 @@ updateRays[ray] 11
 updateRays[ray] 14
 
 ray updateRays/ idx
+\
