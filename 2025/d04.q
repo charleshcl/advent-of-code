@@ -2,9 +2,9 @@
 
 // macOS specific line
 \cd /Users/charleshcl
-\cd github/advent-of-code
+\cd github/advent-of-code/2025
 
-roll:read0 `:./d04.txt //data type of string
+roll:read0 `:./d04ex.txt
 
 // support functon
 replace:{step1:ssr[x;".";"0"];step2:ssr[step1;"@";"1"]}

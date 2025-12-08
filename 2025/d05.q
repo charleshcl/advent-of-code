@@ -1,10 +1,10 @@
-// https://adventofcode.com/2025/day/4
+// https://adventofcode.com/2025/day/5
 
 // macOS specific line
 \cd /Users/charleshcl
-\cd github/advent-of-code
+\cd github/advent-of-code/2025
 
-inFile:read0 `:./d05.txt //data type of string
+inFile:read0 `:./d05ex.txt //data type of string
 
 "part 1"
 

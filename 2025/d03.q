@@ -2,9 +2,9 @@
 
 // macOS specific line
 \cd /Users/charleshcl
-\cd github/advent-of-code
+\cd github/advent-of-code/2025
 
-bank:read0 `:./d03.txt
+bank:read0 `:./d03ex.txt
 
 getNthJoltage:{[x;n]
   startIdx:     x[`startIdx];

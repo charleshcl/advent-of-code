@@ -1,5 +1,5 @@
 // https://adventofcode.com/2025/day/1
-cmds:read0 `:d01.txt //commands in string
+cmds:read0 `:d01ex.txt //commands in string
 // input: start state: a list of start position and number of times on zero
 //        the command, e.g. L48, R3
 // output: end state: a list of end position and number of times on zero
