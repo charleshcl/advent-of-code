@@ -31,12 +31,13 @@ idx:{[mat]
 
 checkIt:{[rmap;idx]
   r:idx[0];c:idx[1];
-  rollCount:("J"$rmap[r-1;c-1])+("J"$rmap[r-1;c])+("J"$rmap[r-1;c+1])+("J"$rmap[r;c-1])+("J"$rmap[r;c+1])+("J"$rmap[r+1;c-1])+("J"$rmap[r+1;c])+("J"$rmap[r+1;c+1])
-  ;res:$[(rmap[r;c]="1") and (rollCount<4);1;0]
+  rollCount:("J"$rmap[r-1;c-1])+("J"$rmap[r-1;c])+("J"$rmap[r-1;c+1])+("J"$rmap[r;c-1])+("J"$rmap[r;c+1])+("J"$rmap[r+1;c-1])+("J"$rmap[r+1;c])+("J"$rmap[r+1;c+1]);
+  res:$[(rmap[r;c]="1") and (rollCount<4);1;0]
  }
 
 // checkIt[augmentedRoll] (1 1)
 // checkIt[augmentedRoll] each idx
 
 sum checkIt[augmentedRoll] each idx
-// too high: 2133
+
+// part 2

@@ -4,7 +4,7 @@
 \cd /Users/charleshcl
 \cd github/advent-of-code
 
-bank:read0 `:./d03.txt //data type of string
+bank:read0 `:./d03.txt
 
 getNthJoltage:{[x;n]
   startIdx:     x[`startIdx];
