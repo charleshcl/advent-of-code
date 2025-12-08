@@ -2,9 +2,9 @@
 
 // macOS specific line
 \cd /Users/charleshcl
-\cd github/advent-of-code
+\cd github/advent-of-code/2025
 
-diagram:read0 `:./d07.txt //data type of string
+diagram:read0 `:./d07ex.txt //data type of string
 lineCount:count diagram
 lineSize:count diagram[0]
 
@@ -23,6 +23,13 @@ lineSize:count diagram[0]
                          ^ ^ splitted beams
     countList:"000000000040100"
 \
+
+updateRays:{[beam;idx]
+  beam[idx]:".";
+  if[idx<lineSize-1;beam[idx+1]:"|"];
+  if[idx>=1;beam[idx-1]:"|"];
+  beam  
+ }
 
 updateRaysContext:{[beamCtx;idx]
   countList:beamCtx[`countList];
