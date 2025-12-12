@@ -3,8 +3,16 @@
 \cd /Users/charleshcl
 \cd github/advent-of-code/2015
 
-cmd:read0 `:d01ex.txt //commands in string
-openP:sum cmd[0]="("
-closeP:sum cmd[0]=")"
+cmd:read0 `:d01.txt //command∂s in string
+instr:cmd[0]
+cnt: count instr
+exitFloor:{
+  subInstr:x$instr;
+  (sum subInstr="(") - sum subInstr=")"
+ }
+
 "part 1"
-openP-closeP
+exitFloor cnt // last position
+
+"part 2"
+(exitFloor each til cnt)?-1
