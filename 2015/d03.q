@@ -36,9 +36,20 @@ freq: count each group positions
 count freq where freq >= 1
 
 "part 2"
-// count instr
-// instrLen:0.5 * count instr
-// instrLen:"i"$instrLen
+// instrs:read0 `:d03.txt
+// instr:instrs[0]
 
-// santa:1+2*til instrLen
-// robot:last 2*til instrLen
+santaInstr:instr where til[count instr] mod 2
+robotInstr:instr where not til[count instr] mod 2
+
+santaOffset:sums dirs each santaInstr
+santaPositions: initPos +/: santaOffset
+santaPositions: (enlist initPos) , santaPositions
+
+robotOffset:sums dirs each robotInstr
+robotPositions: initPos +/: robotOffset
+robotPositions: (enlist initPos) , robotPositions
+
+res1:distinct santaPositions
+res2:distinct robotPositions
+count res1 union res2
