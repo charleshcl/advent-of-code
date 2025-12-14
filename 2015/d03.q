@@ -3,7 +3,7 @@
 \cd /Users/charleshcl
 \cd github/advent-of-code/2015
 
-instrs:read0 `:d03.txt
+instrs:read0 `:d03ex.txt
 instr:instrs[0]
 
 "part 1"
@@ -22,9 +22,6 @@ freq: count each group visited
 count freq where freq >= 1
 
 // rewrite in vectorized version
-
-// instrs: read0 `:d03.txt
-// instr: instrs[0]
 dirs:"^<>v"!((-1 0);(0 -1);(0 1);(1 0));
 offset:sums dirs each instr
 initPos:(0 0)   // initial position
@@ -36,9 +33,6 @@ freq: count each group positions
 count freq where freq >= 1
 
 "part 2"
-// instrs:read0 `:d03.txt
-// instr:instrs[0]
-
 santaInstr:instr where til[count instr] mod 2
 robotInstr:instr where not til[count instr] mod 2
 
