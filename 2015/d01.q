@@ -3,7 +3,7 @@
 \cd /Users/charleshcl
 \cd github/advent-of-code/2015
 
-cmd:read0 `:d01.txt //command∂s in string
+cmd:read0 `:d01ex.txt
 instr:cmd[0]
 cnt: count instr
 exitFloor:{

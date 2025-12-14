@@ -3,7 +3,7 @@
 \cd /Users/charleshcl
 \cd github/advent-of-code/2016
 
-cmd:", " vs/: read0 `:d01.txt
+cmd:", " vs/: read0 `:d01ex.txt
 cmd:cmd[0]
 
 posX:`E`W`S`N!((0;1);(0;-1);(1;0);(-1;0))

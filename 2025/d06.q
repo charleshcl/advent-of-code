@@ -4,7 +4,7 @@
 \cd /Users/charleshcl
 \cd github/advent-of-code/2025
 
-inFile:read0 `:./d06ex.txt //data type of string
+inFile:read0 `:./d06ex.txt 
 lineCount:-1+count inFile
 
 "part 1"

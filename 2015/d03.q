@@ -17,7 +17,7 @@ process:{[curr;dir]
   pos
  }
 
-nextPos:process\[initPos; instr]
+nextPos:process\[initPos; instr]  // ** useful idomatic q
 freq: count each group visited
 count freq where freq >= 1
 
