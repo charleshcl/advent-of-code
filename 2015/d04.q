@@ -9,13 +9,13 @@ skey:skey[0]
 "part 1"
 newKey: skey ,/: string til 399999
 res:5$"" sv/: string (md5 each newKey) 
-idx:res like "00000"
+idx:res like 5#"0"
 idx?1b
 
 "part 2"
 newKey: skey ,/: string til 9999999
 res:6$"" sv/: string (md5 each newKey) 
-idx:res like "000000"
+idx:res like 6#"0"
 idx?1b
 
 // draft
