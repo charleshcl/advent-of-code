@@ -4,7 +4,7 @@
 \cd /Users/charleshcl
 \cd github/advent-of-code/2025
 
-diagram:read0 `:./d07ex.txt //data type of string
+diagram:read0 `:./d07ex.txt
 lineCount:count diagram
 lineSize:count diagram[0]
 
