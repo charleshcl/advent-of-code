@@ -13,13 +13,17 @@ isNice:{
   cond1 & cond2 & cond3  
  }
 
-// x:"ugknbfddgicrmopn"
-// x:"aaa"
-// x:"jchzalrnumimnmhp"
-// x:"haegwjzuvuyypxyu"
-// x:"dvszwmarrgswjxmb"
-// isNice x
-
 sum isNice each s
 
 // "part 2"
+chk:{x[y]=x[y+2]};
+isNice2:{
+  pair:reverse each (,':) x;
+  occ:count each ss[x] each pair;
+  cond1:1<sum occ>1;
+  idx:til -2+count x;
+  cond2:0<sum chk[x] each idx;
+  cond1 & cond2
+ }
+
+sum isNice2 each s
