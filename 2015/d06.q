@@ -53,3 +53,33 @@ res_m:m0 process/ instr
 // res_m:m0 process/ instr0
 
 sum sum each res_m
+
+"part 2"
+newProcess:{[m;i]
+  if[i like "toggle *";
+    corner:"J"$"," vs/: " through " vs ssr[i;"toggle ";""];
+    ((s_x;s_y);(e_x;e_y)):corner;
+    idx_x:s_x + til (1+e_x-s_x);
+    idx_y:s_y + til (1+e_y-s_y);
+    m[idx_x;idx_y]: {2+x} m[idx_x;idx_y]
+  ];
+  if[i like "turn on *";
+    corner:"J"$"," vs/: " through " vs ssr[i;"turn on ";""];
+    ((s_x;s_y);(e_x;e_y)):corner;
+    idx_x:s_x + til (1+e_x-s_x);
+    idx_y:s_y + til (1+e_y-s_y);
+    m[idx_x;idx_y]: {1+x} m[idx_x;idx_y]
+  ];
+  if[i like "turn off *";
+    corner:"J"$"," vs/: " through " vs ssr[i;"turn off ";""];
+    ((s_x;s_y);(e_x;e_y)):corner;
+    idx_x:s_x + til (1+e_x-s_x);
+    idx_y:s_y + til (1+e_y-s_y);
+    m[idx_x;idx_y]: {max (0;-1+x)} m[idx_x;idx_y]
+  ];
+  m
+ }
+
+res_m:m0 newProcess/ instr
+
+sum sum each res_m
