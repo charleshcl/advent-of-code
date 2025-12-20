@@ -1,4 +1,4 @@
-// https://adventofcode.com/2015/day/6
+// https://adventofcode.com/2015/day/25
 
 \cd /Users/charleshcl
 \cd github/advent-of-code/2015
@@ -12,9 +12,7 @@ idx:{[r;c]
   v1+v2
  }
 n:idx[r;c]
-// n:idx[1;1]
-nextCode:{[x] (x*252533) mod 33554393}
-// nextCode 20151125
+nextCode:{(x*252533) mod 33554393}
 // nextCode nextCode 20151125           -> 2 nextCode/ 20151125
 // nextCode nextCode nextCode 20151125  -> 3 nextCode/ 20151125
 (n-1) nextCode/ 20151125

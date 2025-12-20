@@ -78,6 +78,8 @@ findInvalid2:{[idRange] elem:idRange[0]+til 1+idRange[1]-idRange[0];
   // sum checkValidity2 each elem
  }
 
+findInvalid2 3         21        
+
 // unit test
 findInvalid2 11         22        
 findInvalid2 95         115       
