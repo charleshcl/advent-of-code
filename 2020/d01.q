@@ -11,3 +11,22 @@ pair:i cross i
 s:sum each pair
 r:pair where s=2020
 prd r[0]
+
+"part 2"
+tuple:i cross i cross i
+s:sum each tuple
+r:tuple where s=2020
+prd r[0]
+
+"generalized version"
+f:{
+  s:sum each x;
+  r:x where s=2020;
+  prd r[0]
+ }
+
+"part 1"
+f i cross i
+
+"part 2"
+f i cross i cross i
