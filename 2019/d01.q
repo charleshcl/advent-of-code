@@ -3,9 +3,13 @@
 \cd /Users/charleshcl
 \cd github/advent-of-code/2019
 
-input:read0 `:d01.txt
+input:read0 `:d01ex.txt
 
 "part 1"
 mass:"J"$/:input
-f:{-2+floor x%3}
+f:{max(0;-2+floor x%3)}
 sum f each mass
+
+"part 2"
+g:{[mass] sum 1_f\[{x>0};mass]}
+sum g each mass
