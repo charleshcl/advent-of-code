@@ -3,7 +3,7 @@
 \cd /Users/charleshcl
 \cd github/advent-of-code/2020
 
-input:read0 `:d01.txt
+input:read0 `:d01ex.txt
 
 "part 1"
 i:"J"$/:input
