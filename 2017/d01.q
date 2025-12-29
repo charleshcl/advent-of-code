@@ -17,3 +17,17 @@ half:"i"$(count int)%2
 candidate:((-1*half) sublist int), half sublist int // swap first half with second half
 mask:candidate=int
 sum int where mask
+
+"refactoring with generalized offset"
+f:{[offset]
+  int:"J"$/:input[0];
+  candidate:((-1*offset) sublist int), ((-1*offset)+count int) sublist int;; // cyclic the string
+  mask:candidate=int;
+  sum int where mask
+ }
+
+"part 1"
+f 1
+
+"part 2"
+f "i"$(count int)%2
